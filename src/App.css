@@ -15,6 +15,9 @@ button {
   align-items: center;
   font-style: italic;
 }
+/* .header_navIcons {
+  display: none;
+} */
 .header_logo {
   margin: auto 10px;
   padding: 5px 5px;
@@ -578,3 +581,30 @@ td {
   border-top: 2px solid rgba(211, 211, 211, 0.637);
   padding: 10px 70px;
 }
+
+/* Media query for responsiveness */
+/* @media (max-width: 768px) {
+  .header {
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  .header_nav {
+    display: none;
+  }
+  .header_navIcons {
+    display: flex;
+  }
+
+  .navbar {
+    margin-top: 10px;
+  }
+
+  .navbar ul {
+    flex-direction: column;
+  }
+
+  .navbar li {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+} */
