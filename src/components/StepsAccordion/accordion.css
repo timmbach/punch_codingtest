@@ -1,0 +1,40 @@
+.steps_accordion {
+  margin-bottom: 5px;
+  cursor: pointer;
+  gap: 10px;
+
+  overflow: hidden;
+  transition: height 1s ease;
+
+  user-select: none;
+}
+
+.steps_accordion.open {
+  height: auto;
+}
+.steps_accordionHeader {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  border: 1px solid lightgray;
+  border-radius: 3px;
+  padding: 15px 20px;
+  font-weight: 400;
+}
+.steps_accordionContent {
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  border-top: none;
+  padding: 20px;
+  margin-top: -20px;
+  padding-top: 0px;
+  font-size: 16px;
+  /* padding-right: 40px; */
+
+  box-shadow: -1px 10px 9px 4px rgba(99, 99, 99, 0.21);
+  -webkit-box-shadow: -1px 10px 9px 4px rgba(99, 99, 99, 0.21);
+  -moz-box-shadow: -1px 10px 9px 4px rgba(99, 99, 99, 0.21);
+
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+}
