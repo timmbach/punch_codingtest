@@ -552,7 +552,13 @@ function App() {
       <div className="steps">
         <div className="steps_summary">
           <h6>How we ensure you're in good hands</h6>
-          <p style={{ fontSize: "22px", marginTop: "40px" }}>
+          <p
+            style={{
+              fontSize: "22px",
+              marginTop: "40px",
+              marginBottom: "10px",
+            }}
+          >
             With our comprehensive screening process, we hand-pick highly
             skilled candidates so you can onboard them in a matter of days.
           </p>

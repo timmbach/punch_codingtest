@@ -1,24 +1,40 @@
 import React from "react";
 
-function Card({ img }) {
+function Card({ slideData }) {
   return (
     <div className="card flex justify-between m-2 p-10 bg-white rounded-md shadow items-center">
       <div className="card_info flex flex-col gap-5 w-1/3">
-        <h6 className="italic text-5xl">Onboard without the risk.</h6>
+        <h6 className="italic text-5xl">{slideData.slideTitle}</h6>
         <ul>
-          <li className="flex items-center gap-2">
-            <svg
-              width="18"
-              height="7"
-              viewBox="0 0 18 7"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <rect width="18" height="7" rx="3.5" fill="#50589F" />
-            </svg>
-            <p>We pick the best for you to select.</p>
-          </li>
-          <li className="flex items-center gap-2">
+          {slideData.slideContent.map((listItem, index) => (
+            <li key={index} className="flex items-baseline gap-2">
+              {slideData.slideTitle !== "Why choose Zwilt?" && (
+                <svg
+                  width="18"
+                  height="7"
+                  viewBox="0 0 18 7"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <rect
+                    width="18"
+                    height="7"
+                    rx="3.5"
+                    fill={` ${
+                      slideData.slideTitle === "Onboard without the risk."
+                        ? "#50589F"
+                        : slideData.slideTitle === "An open book."
+                        ? "#FFBE2E"
+                        : slideData.slideTitle === "Stay in the loop." &&
+                          "#C7F4C2"
+                    } `}
+                  />
+                </svg>
+              )}
+              <p>{listItem}</p>
+            </li>
+          ))}
+          {/* <li className="flex items-center gap-2">
             <svg
               width="18"
               height="7"
@@ -41,7 +57,7 @@ function Card({ img }) {
               <rect width="18" height="7" rx="3.5" fill="#50589F" />
             </svg>
             <p>Risk-free resource swapping for the best fit.</p>
-          </li>
+          </li> */}
         </ul>
         <div className="flex items-center gap-2">
           <svg
@@ -65,7 +81,14 @@ function Card({ img }) {
           <p className="italic">Learn More</p>
         </div>
       </div>
-      <img className="h-[500px] object-contain" src={img} alt="" />
+
+      {slideData.slideImage && (
+        <img
+          className="h-[500px] object-contain"
+          src={slideData.slideImage}
+          alt=""
+        />
+      )}
     </div>
   );
 }
