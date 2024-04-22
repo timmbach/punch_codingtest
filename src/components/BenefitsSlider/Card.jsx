@@ -3,7 +3,7 @@ import React from "react";
 function Card({ slideData }) {
   return (
     <div className="card flex justify-between m-2 p-10 bg-white rounded-md shadow items-center">
-      <div className="card_info flex flex-col gap-5 w-1/3">
+      <div className="card_info flex flex-col gap-5 w-full">
         <h6 className="italic text-5xl">{slideData.slideTitle}</h6>
         <ul>
           {slideData.slideContent.map((listItem, index) => (
@@ -59,7 +59,7 @@ function Card({ slideData }) {
             <p>Risk-free resource swapping for the best fit.</p>
           </li> */}
         </ul>
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-2 cursor-pointer">
           <svg
             width="50"
             height="50"
@@ -78,7 +78,9 @@ function Card({ slideData }) {
             />
           </svg>
 
-          <p className="italic">Learn More</p>
+          <p className="italic text-slate-600 hover:text-black hover:ml-[2px]">
+            Learn More
+          </p>
         </div>
       </div>
 

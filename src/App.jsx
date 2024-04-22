@@ -21,6 +21,9 @@ function App() {
   const svgRef = useRef(null);
   const [viewBox, setViewBox] = useState(null);
 
+  // faq hover
+  const [faqHover, setFaqHover] = useState(false);
+
   // useEffect for blinking cursor in hero section
   // useEffect(() => {
   //   const interval = setInterval(() => {
@@ -678,11 +681,7 @@ function App() {
                         fill="#EDEFFF"
                       />
                     </svg>
-                    <p
-                      style={{
-                        fontStyle: "italic",
-                      }}
-                    >
+                    <p className="italic hover:ml-[2px] opacity-70 hover:opacity-100">
                       Join Now
                     </p>
                   </div>
@@ -771,11 +770,7 @@ function App() {
                         fill="#EDEFFF"
                       />
                     </svg>
-                    <p
-                      style={{
-                        fontStyle: "italic",
-                      }}
-                    >
+                    <p className="italic hover:ml-[2px] opacity-70 hover:opacity-100">
                       Browse More
                     </p>
                   </div>
@@ -864,11 +859,7 @@ function App() {
                         fill="#EDEFFF"
                       />
                     </svg>
-                    <p
-                      style={{
-                        fontStyle: "italic",
-                      }}
-                    >
+                    <p className="italic hover:ml-[2px] opacity-70 hover:opacity-100">
                       Join Now
                     </p>
                   </div>
@@ -880,7 +871,197 @@ function App() {
         </div>
       </div>
       <div className="benefits_carousel">
-        <BenefitsSlider />
+        <div>
+          <BenefitsSlider />
+        </div>
+      </div>
+      <div className="faq flex flex-col bg-[#F3F3F3]">
+        <h2>Frequently asked questions</h2>
+        <div className="faq_list my-10">
+          <ul className="flex flex-col w-full justify-between border text-start">
+            <li className="border">
+              <ul className="flex">
+                <li className="w-1/6 p-8 italic  hover:bg-[#e8e8e8]">
+                  General
+                </li>
+                <li className="w-4/6 p-8 ps-[19%] faq_listItem flex justify-between flex-grow">
+                  I want to work part-time, is that possible
+                </li>
+              </ul>
+            </li>
+            <li className="border p-8 ps-[36%] w-full flex justify-between faq_listItem">
+              How long are the average projects?
+            </li>
+            <li className="border p-8 ps-[36%] w-full flex justify-between faq_listItem">
+              How does the payment works?
+            </li>
+            <li className="border p-8 ps-[36%] w-full flex justify-between faq_listItem">
+              How much can I earn?
+            </li>
+            <li className="border">
+              <ul className="flex">
+                <li className="w-1/6 p-8 italic hover:bg-[#e8e8e8]">General</li>
+                <li className="w-1/6 p-8 italic hover:bg-[#e8e8e8]">
+                  Joining Process
+                </li>
+                <li className="w-4/6 p-8 faq_listItem  flex justify-between">
+                  I want to work part-time, is that possible
+                </li>
+              </ul>
+            </li>
+            <li className="border p-8 ps-[36%] w-full flex justify-between faq_listItem">
+              How long are the average projects?
+            </li>
+            <li className="border p-8 ps-[36%] w-full flex justify-between faq_listItem">
+              How does the payment works?
+            </li>
+            <li className="border p-8 ps-[36%] w-full flex justify-between faq_listItem">
+              How much can I earn?
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div style={{ width: "100%", marginTop: "-62px" }}>
+        <svg
+          ref={svgRef}
+          width="100%"
+          height="65"
+          viewBox={viewBox}
+          preserveAspectRatio="none"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path d="M1440 0L0 64.5H1440V0Z" fill="#0C0C0C" />
+        </svg>
+      </div>
+      <div className="footer flex flex-col gap-32">
+        <div className="footer_getStarted flex flex-col justify-center items-center text-center gap-5">
+          <h2>Need a job done, and done well? Get started</h2>
+          <svg
+            width="74"
+            height="74"
+            viewBox="0 0 74 74"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <rect
+              x="73.7314"
+              width="73.7319"
+              height="73.7319"
+              rx="29.8913"
+              transform="rotate(90 73.7314 0)"
+              fill="#202229"
+            />
+            <path
+              d="M37.3637 38.2203C33.8406 38.2203 30.9845 35.2407 30.9845 31.5651C30.9845 27.8895 33.8406 24.9099 37.3637 24.9099C40.8869 24.9099 43.743 27.8895 43.743 31.5651C43.743 35.2407 40.8869 38.2203 37.3637 38.2203Z"
+              fill="#EDEFFF"
+            />
+            <path
+              d="M29.8909 36.509L44.8365 36.509L37.3637 49.8193L29.8909 36.509Z"
+              fill="#EDEFFF"
+            />
+          </svg>
+        </div>
+        <div className="footer_connect flex gap-[70px]">
+          <div className="footer_connectContact w-[30%] flex flex-col gap-8">
+            <svg
+              width="120"
+              height="30"
+              viewBox="0 0 120 30"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M0 26.4321V22.8794L5.21521 16.4845H0.403758V10.8002H13.9633V14.3529L8.74809 20.7478H14.3671V26.4321H0Z"
+                fill="white"
+              />
+              <path
+                d="M20.0654 26.4321L14.2782 10.8002H22.488L24.2376 17.6569L26.6265 10.8002H29.6883L32.0772 17.6569L33.8268 10.8002H42.0366L36.2494 26.4321H29.8902L28.1742 21.636L26.4246 26.4321H20.0654Z"
+                fill="white"
+              />
+              <path
+                d="M49.7419 6.50145C48.9792 7.1883 48.0035 7.53173 46.8146 7.53173C45.6258 7.53173 44.65 7.1883 43.8874 6.50145C43.1247 5.79091 42.7434 4.87905 42.7434 3.76587C42.7434 2.65268 43.1247 1.75267 43.8874 1.06581C44.65 0.35527 45.6258 0 46.8146 0C48.0035 0 48.9792 0.35527 49.7419 1.06581C50.5045 1.75267 50.8859 2.65268 50.8859 3.76587C50.8859 4.87905 50.5045 5.79091 49.7419 6.50145ZM43.0462 26.4321V10.8002H50.6167V26.4321H43.0462Z"
+                fill="white"
+              />
+              <path
+                d="M59.6563 26.4321C57.5254 26.4321 55.843 25.7808 54.6093 24.4781C53.398 23.1755 52.7924 21.3873 52.7924 19.1135V0.142108H60.3629V18.9004C60.3629 19.5162 60.4863 20.0017 60.733 20.357C61.0022 20.6886 61.3498 20.8544 61.776 20.8544H62.4153L61.9443 26.4321H59.6563Z"
+                fill="white"
+              />
+              <path
+                d="M75.4696 20.8188L76.8491 25.3308C75.3463 26.4676 73.7537 27.0361 72.0713 27.0361C69.6712 27.0361 67.7758 26.3374 66.3851 24.94C65.0168 23.5426 64.3326 21.6241 64.3326 19.1846V16.4845H62.4484V10.8002H64.9383L65.2074 5.32906H71.9031V10.8002H75.7052V16.4845H71.9031V19.1846C71.9031 19.8715 72.0377 20.4162 72.3069 20.8188C72.5985 21.1978 72.991 21.3873 73.4845 21.3873C74.0228 21.3873 74.6845 21.1978 75.4696 20.8188Z"
+                fill="white"
+              />
+              <path
+                d="M102.956 17.8619C102.956 23.2584 98.5782 27.6331 93.1774 27.6331C87.7766 27.6331 83.3984 23.2584 83.3984 17.8619C83.3984 12.4653 87.7766 8.0906 93.1774 8.0906C98.5782 8.0906 102.956 12.4653 102.956 17.8619Z"
+                fill="#FFBE2E"
+              />
+              <path
+                d="M100.442 29.3082V6.41553L120 17.8619L100.442 29.3082Z"
+                fill="#FFBE2E"
+              />
+            </svg>
+            <p className="opacity-60 w-4/5">
+              We take complex hiring processes - and simplify them. Connecting
+              you to the world’s highly qualified talent pool.
+            </p>
+            <div className="flex flex-col gap-3">
+              <h6 className="opacity-50 italic">LINKS AND REDIRECTS</h6>
+              <div className="flex justify-between items-center italic opacity-80 gap-2">
+                <button className="bg-[#292B34] p-3 rounded-2xl w-60 italic">
+                  Hire now
+                </button>
+                <button className="bg-[#292B34] p-3 rounded-2xl w-60 italic">
+                  Apply now
+                </button>
+              </div>
+            </div>
+          </div>
+          <div className="footer_connectSummary flex flex-col gap-10 w-[70%]">
+            <h2>Connecting the right people to the right businesses.</h2>
+            <div className="footer_connectSummaryList">
+              <table>
+                <thead>
+                  <tr>
+                    <th>PLATFORM</th>
+                    <th>CATEGORIES</th>
+                    <th>HELP</th>
+                    <th>GET IN TOUCH @</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Find Work</td>
+                    <td>Data Science</td>
+                    <td>Contact Us</td>
+                    <td>Instagram</td>
+                  </tr>
+                  <tr>
+                    <td>Find Talent</td>
+                    <td>IT & Networking</td>
+                    <td></td>
+                    <td>LinkedIn</td>
+                  </tr>
+                  <tr>
+                    <td>Articles</td>
+                    <td>Web & Mobile</td>
+                    <td></td>
+                    <td>Twitter</td>
+                  </tr>
+                  <tr>
+                    <td>About Us</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="footer_links flex justify-between italic">
+        <p className="opacity-90">All rights reserved</p>
+        <div className="flex items-center gap-10 opacity-60 ">
+          <p className="underline">Privacy</p>
+          <p className="underline">Terms and Conditions</p>
+        </div>
       </div>
     </div>
   );

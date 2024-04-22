@@ -1,7 +1,10 @@
 .app {
   background-color: white;
 }
-
+li,
+button {
+  user-select: none;
+}
 .header {
   background-color: #525aa0;
   margin: 60px;
@@ -476,4 +479,102 @@
   flex-direction: column; */
   padding: 70px;
   /* padding-left: 70px; */
+
+  transform-origin: top right;
+  transform: skewY(-2deg);
+}
+.benefits_carousel > div {
+  transform-origin: top right;
+  transform: skewY(2deg);
+}
+
+.faq {
+  display: flex;
+  /* flex-direction: column; */
+  padding: 100px 0px;
+}
+
+.faq h2 {
+  font-size: 48px;
+  text-align: center;
+  font-style: italic;
+}
+
+.faq_list li + li {
+  border-left: 1px solid lightgray;
+}
+
+.faq_list > ul .faq_listItem:hover::after {
+  content: url(./assets/listHoverSvg.svg);
+}
+.faq_list > ul .faq_listItem:hover {
+  font-style: italic;
+  background-color: #e8e8e8;
+}
+
+.footer {
+  background-color: #0c0c0c;
+  height: 110vh;
+  margin-top: -2px;
+  padding: 0px 70px;
+  color: white;
+}
+.footer_getStarted {
+  background-color: #525aa0;
+  transform-origin: top right;
+  transform: skewY(-2deg);
+  height: 40vh;
+  /* margin: 0px 70px; */
+}
+.footer_getStarted h2 {
+  font-size: 48px;
+  text-align: center;
+  font-style: italic;
+  color: white;
+  width: 55%;
+}
+.footer_getStarted svg {
+  cursor: pointer;
+}
+.footer_connectSummary h2 {
+  font-size: 40px;
+  /* text-align: center; */
+  font-style: italic;
+  font-weight: 300;
+  color: white;
+  width: 70%;
+}
+.footer_connectSummaryList {
+  overflow-x: auto;
+}
+.footer_connectSummaryList > table {
+  border-collapse: collapse;
+  border-spacing: 30px;
+  width: 100%;
+  user-select: none;
+}
+.footer_connectSummaryList > table th,
+td {
+  padding: 8px;
+  text-align: left;
+  opacity: 0.95;
+}
+.footer_connectSummaryList > table thead th {
+  /* background-color: #f2f2f2; */
+  font-weight: 300;
+  font-style: italic;
+  opacity: 0.6;
+}
+.footer_connectSummaryList > table tbody td:hover {
+  /* background-color: #f2f2f2; */
+  border-bottom: 3px solid rgba(236, 236, 236, 0.212);
+  font-style: italic;
+  width: max-content;
+}
+
+.footer_links {
+  background-color: #0c0c0c;
+  color: white;
+  border-top: 2px solid rgba(211, 211, 211, 0.637);
+  padding: 10px 70px;
 }
