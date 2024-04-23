@@ -342,7 +342,7 @@ function App() {
             <div className="offers_contentDetailsRight">
               <img src={offerDetail1} alt="" />
               <img src={offerDetail2} alt="" />
-              <p>30 more to explore</p>
+              <p className="cursor-pointer">30 more to explore</p>
             </div>
           </div>
         </div>

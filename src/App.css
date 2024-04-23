@@ -190,6 +190,7 @@ button {
   background: #edefff;
   opacity: 0.8;
   z-index: 5;
+  user-select: none;
 }
 
 .offers:after {
@@ -271,6 +272,7 @@ button {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  user-select: none;
 }
 .offers > .offers_content > .offers_contentDetails img {
   width: 600px;
