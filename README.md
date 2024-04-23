@@ -4,6 +4,10 @@
 
 This React application is a landing page from a coding test issued by punch group for a MERN developer position. It includes basic components for building a landing page and was set-up using create-react-app.
 
+## Challenges:
+
+The was no mobile design provided and As I am a mobile-first react developer, this was a challenge I remediated by simply going for a desktop design first but couldn't make time to begin implementation of a mobile view.
+
 ## Features
 
 ### Component-based Architecture:
