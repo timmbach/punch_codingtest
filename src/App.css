@@ -584,6 +584,7 @@ td {
   color: white;
   border-top: 2px solid rgba(211, 211, 211, 0.637);
   padding: 10px 70px;
+  user-select: none;
 }
 
 /* Media query for responsiveness */

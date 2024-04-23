@@ -49,7 +49,7 @@ function App() {
 
   return (
     <div className="app">
-      <div className="header">
+      <div className="header m-5 md:m-[60px]">
         <div className="header_logo">
           <svg
             width="112"
@@ -100,9 +100,14 @@ function App() {
           <button>Join Now</button>
         </div>
       </div>
-      <div className="hero" style={{ position: "relative" }}>
-        <article style={{ position: "relative" }}>
-          <h2>Finding the right fit has never been easier.</h2>
+      <div
+        className="hero flex md:flex-col m-5 md:m-[70px]"
+        style={{ position: "relative" }}
+      >
+        <article className="w-90 md:w-[45%]" style={{ position: "relative" }}>
+          <h2 className="w-90 md:w-[75%] md:text-xl">
+            Finding the right fit has never been easier.
+          </h2>
           <img
             style={{
               width: "50px",
@@ -117,10 +122,15 @@ function App() {
             With our rigorous pre-vetting process, you'll never have to worry
             about finding the ideal candidate ever again.
           </p>
-          <div className="hero_search">
-            <input type="text" name="hero-search" placeholder="design" />
+          <div className="hero_search my-3 md:my-[20px]">
+            <input
+              className="mx-2 md:mx-[25px]"
+              type="text"
+              name="hero-search"
+              placeholder="design"
+            />
             {/* {showCursor && <span className="hero_searchCursor">|</span>} */}
-            <div className="hero_searchLogo">
+            <div className="hero_searchLogo p-2 md:px-[20px] md:py-[18px]">
               <svg
                 width="25"
                 height="15"
@@ -140,7 +150,7 @@ function App() {
             </div>
           </div>
         </article>
-        <div className="hero_roles">
+        <div className="hero_roles w-full md:w-[60%] px-0 md:px-[80px] py-1 md:py-[15px] mt-2 md:mt-[40px]">
           <div className="hero_rolesCategories">
             <button>IT & Development</button>
             <button>Design and Creative</button>
@@ -192,12 +202,12 @@ function App() {
           </svg>
         </div>
       </div>
-      <div className="offers">
+      <div className="offers ">
         <div className="offers_content">
           <h2>
             Your one-stop marketplace for finding the talent your business needs
           </h2>
-          <div className="offers_contentDetails">
+          <div className="offers_contentDetails flex flex-col md:flex-row">
             <div className="offers_contentDetailsLeft">
               <div>
                 <h5>Find Dev and IT professionals to scale your business</h5>
@@ -384,7 +394,7 @@ function App() {
             </defs>
           </svg>
         </div>
-        <div className="reviews_content">
+        <div className="reviews_content flex flex-col md:flex-row">
           <div className="reviews_contentQuote">
             <h6>
               <span>
@@ -1059,8 +1069,8 @@ function App() {
       <div className="footer_links flex justify-between italic">
         <p className="opacity-90">All rights reserved</p>
         <div className="flex items-center gap-10 opacity-60 ">
-          <p className="underline">Privacy</p>
-          <p className="underline">Terms and Conditions</p>
+          <p className="underline cursor-pointer">Privacy</p>
+          <p className="underline cursor-pointer">Terms and Conditions</p>
         </div>
       </div>
     </div>
